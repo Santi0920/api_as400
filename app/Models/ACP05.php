@@ -161,7 +161,7 @@ public function scopeAsociadoNombre($query, $cedula){
     return $query->selectRaw('RTRIM(NCTA05) AS CUENTA,
                 RTRIM(DESC05) AS NOMBRES,
                 RTRIM(NNIT05) AS CEDULA,
-                RTRIM(FRDA05) AS RETIRO')
+                RTRIM(FERE05) AS RETIRO')
                  ->join('COLIB.ACP04', 'COLIB.ACP05.NOMI05', '=', 'COLIB.ACP04.NOMI04')
                  ->join('COLIB.ACP02', 'COLIB.ACP05.ENTI05', '=', 'COLIB.ACP02.ENTI02')
                  ->where('COLIB.ACP05.NCTA05', $cuenta)
